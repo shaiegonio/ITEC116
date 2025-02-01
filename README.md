@@ -3,6 +3,8 @@ Laboratory Activity #1: Introduction to FastAPI
 This code defines a FastAPI application with a route that calculates the factorial of a number provided in the URL. It starts by importing FastAPI and creating an instance of the FastAPI application. The route listens for GET requests at the path `/factorial/{starting_number}`, where `{starting_number}` is a dynamic part of the URL, representing the number for which the factorial will be calculated. The function `factorial` takes this number as an argument, checks if the number is `0` (in which case it returns `{"result": False}`), and then calculates the factorial by multiplying the number by all the integers less than it down to `1`. The result is stored in the variable `factor` and returned as a dictionary with the key `"result"`. For example, if the URL is `/factorial/5`, the API will return `{"result": 120}`, which is the factorial of `5`.
 
 
+
+
 Laboratory Activity #2: Working with HTTP actions and API parameters
 
 This code creates a simple web API using FastAPI to manage user data, including operations like retrieving, adding, updating, and deleting user information. It begins by importing necessary modules: `FastAPI` for creating the API, `BaseModel` from Pydantic for data validation, and `Optional` from the `typing` module to allow optional parameters. The `User` class, which extends `BaseModel`, defines the structure of a user, requiring a `user_id` and `name`. A sample list, `users_db`, is used to represent a database of users.
